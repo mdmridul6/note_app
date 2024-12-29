@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/button_page.dart';
 import 'package:note/container_page.dart';
+import 'package:note/list_view_builder.dart';
 import 'package:note/text_form_field_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -50,6 +51,19 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Container Page'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ListViewBuilder(),
+                  ),
+                );
+              },
+              child: const Text('List View Page'),
+            ),
+
+
           ],
         ),
       ),
